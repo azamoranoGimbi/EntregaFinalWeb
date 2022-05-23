@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  php-apache-environment:
+    container_name: php-apache-entregaFinal
+    image: php:8.0-apache
+    volumes:
+      - ./src/Vista:/var/www/html/
+    ports:
+      - 80:80
+volumes: 
+  app_db:
+
+networks: 
+  nt_mysql:
+    driver: bridge
