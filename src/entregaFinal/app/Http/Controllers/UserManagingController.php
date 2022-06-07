@@ -51,6 +51,7 @@ class UserManagingController extends BaseController{
     }
 
     public function editUser(Request $request){
+       
         return true;
     }
 
