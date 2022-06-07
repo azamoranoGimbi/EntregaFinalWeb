@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Register</title>
+  <title>Registre</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -61,11 +61,12 @@
                 <div class="card-body">
 
                   <div class="pt-4 pb-2">
-                    <h5 class="card-title text-center pb-0 fs-4">Registrar-se</h5>
-                    <p class="text-center small">Introdueix les teves dades</p>
+                    <h5 class="card-title text-center pb-0 fs-4">Pàgina de registre</h5>
+                    <p class="text-center small">Posa les dades que es demanen per a poder registrar-te.</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" method="post" action="/api/userRegister" novalidate>
+                    @csrf
                     <div class="col-12">
                       <label for="yourName" class="form-label">Nom</label>
                       <input type="text" name="name" class="form-control" id="yourName" required>
@@ -73,17 +74,24 @@
                     </div>
 
                     <div class="col-12">
-                      <label for="yourEmail" class="form-label">Email</label>
-                      <input type="email" name="email" class="form-control" id="yourEmail" required>
-                      <div class="invalid-feedback">L'adreça de correu no és vàlida!</div>
+                      <label for="yourName" class="form-label">Cognoms</label>
+                      <input type="text" name="Lastname" class="form-control" id="yourName" required>
+                      <div class="invalid-feedback">Has d'introdruïr els cognoms!</div>
                     </div>
 
+                    <div class="col-12">
+                      <label for="yourEmail" class="form-label">Email</label>
+                      <input type="email" name="email" class="form-control" id="yourEmail" required>
+                      <div class="invalid-feedback">Has de posar un email vàlid!</div>
+                    </div>
+
+                    
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Nom d'usuari</label>
                       <div class="input-group has-validation">
                         <span class="input-group-text" id="inputGroupPrepend">@</span>
                         <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Has de posar un nom d'usuari!</div>
+                        <div class="invalid-feedback">Posa un nom d'ususari.</div>
                       </div>
                     </div>
 
@@ -94,10 +102,19 @@
                     </div>
 
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="submit">Registra't</button>
+                      <label for="birthday" class="form-label">Data de naixment</label>
+                      <input type="date" name="birthday" class="form-control" id="birthday">
+                    </div>
+
+                    <div class="col-12">
+                      <label for="image" class="form-label">Imatge de perfil</label>
+                      <input type="file" name="image" class="form-control" id="image">
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Ja estàs registrat? <a href="pages-login.html">Log in</a></p>
+                      <button class="btn btn-primary w-100" type="submit">Create Account</button>
+                    </div>
+                    <div class="col-12">
+                      <p class="small mb-0">Ja ets part de la família? <a href="pages-login.html">Log in</a></p>
                     </div>
                   </form>
 
