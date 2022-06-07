@@ -65,7 +65,7 @@
                     <p class="text-center small">Posa les dades que es demanen per a poder registrar-te.</p>
                   </div>
 
-                  <form class="row g-3 needs-validation" novalidate>
+                  <form class="row g-3 needs-validation" method="post" action="/api/userRegister" novalidate>
                     @csrf
                     <div class="col-12">
                       <label for="yourName" class="form-label">Nom</label>
@@ -75,7 +75,7 @@
 
                     <div class="col-12">
                       <label for="yourName" class="form-label">Cognoms</label>
-                      <input type="text" name="name" class="form-control" id="yourName" required>
+                      <input type="text" name="Lastname" class="form-control" id="yourName" required>
                       <div class="invalid-feedback">Has d'introdruïr els cognoms!</div>
                     </div>
 
