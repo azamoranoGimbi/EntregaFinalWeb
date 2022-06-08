@@ -23,30 +23,26 @@ class UserManagingController extends BaseController{
         $contrassenya = $request->input('password');
         $dataNaixement = $request->input('birthday');
         $imatge = $request->input('image');
-
-        $emailExist = User_table::where('email', $email);
-        if(is_null($emailExist)){
-            try{
-                $isInserSuccess = User_table::insert(
-                    [
-                        'Nombre' => $nom,
-                        'Apellidos' => $cognoms,
-                        'Correo' => $email,
-                        'NickName' => $nomUsuari,
-                        'password' => $contrassenya,
-                        'FechaNacimiento' => $dataNaixement,
-                        'Rol' => "estandar",
-                        'RutaImagen' => $imatge
-                    ]
-                );
-            }catch(Exception $e){
-                echo(json(['error' => $e->getMessage()], 500));
+            
+            $isInserSuccess = User_table::insert(
+                [
+                    'Nombre' => $nom,
+                    'Apellidos' => $cognoms,
+                    'Correo' => $email,
+                    'NickName' => $nomUsuari,
+                    'password' => $contrassenya,
+                    'FechaNacimiento' => $dataNaixement,
+                    'Rol' => "estandar",
+                    'RutaImagen' => $imatge
+                ]
+            );
+            if($isInserSuccess){
+    
+                return view('pages-login');
+            }else{
                 return view('welcome');
             }
-            return view('pages-login');
-        }
-            
-
+        
         
     }
 
@@ -57,12 +53,13 @@ class UserManagingController extends BaseController{
         $isLoginSuccess = User_table::where('Correo', $email)
                                     ->where('password', $contrasenya)
                                     ->first();
+        if($isLoginSuccess){
 
-        if(is_null($isLoginSuccess)){
-            return "<h1>Error</h1>";
-        }else{
             return view('welcome');
-            
+        }
+        else{
+            return "<h1>Error</h1>";
+
         }
 
     }
