@@ -24,28 +24,48 @@ class UserManagingController extends BaseController{
         $dataNaixement = $request->input('birthday');
         $imatge = $request->input('image');
 
-        $isInserSuccess = User_table::insert(
-            [
-                'Nombre' => $nom,
-                'Apellidos' => $cognoms,
-                'Correo' => $email,
-                'NickName' => $nomUsuari,
-                'password' => $contrassenya,
-                'FechaNacimiento' => $dataNaixement,
-                'Rol' => "estandar",
-                'RutaImagen' => $imatge
-            ]
-        );
-        if($isInserSuccess){
+        $emailExist = User_table::where('email', $email);
+        if(is_null($emailExist)){
+            try{
+                $isInserSuccess = User_table::insert(
+                    [
+                        'Nombre' => $nom,
+                        'Apellidos' => $cognoms,
+                        'Correo' => $email,
+                        'NickName' => $nomUsuari,
+                        'password' => $contrassenya,
+                        'FechaNacimiento' => $dataNaixement,
+                        'Rol' => "estandar",
+                        'RutaImagen' => $imatge
+                    ]
+                );
+            }catch(Exception $e){
+                echo(json(['error' => $e->getMessage()], 500));
+                return view('welcome');
+            }
+            return view('pages-login');
+        }
+            
 
-            return view('registerSuccess');
-        }
-        else{
-            return "<h1>Error</h1>";
-        }
         
     }
 
+    public function loginUser(Request $request){
+        $email = $request->input('email');
+        $contrasenya = $request->input('password');
+
+        $isLoginSuccess = User_table::where('Correo', $email)
+                                    ->where('password', $contrasenya)
+                                    ->first();
+
+        if(is_null($isLoginSuccess)){
+            return "<h1>Error</h1>";
+        }else{
+            return view('welcome');
+            
+        }
+
+    }
     public function deleteUser(Request $request){
         return true;
     }
