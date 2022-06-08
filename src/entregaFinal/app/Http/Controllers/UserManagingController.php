@@ -37,13 +37,19 @@ class UserManagingController extends BaseController{
             ]
         );
         if($isInserSuccess){
-
-            return view('registerSuccess');
+            
+            return view('pages-login');
         }
         else{
             return "<h1>Error</h1>";
         }
         
+    }
+
+    public function loginUser(Request $request){
+
+        $nomUsuari = $request->input('username');
+        $contrassenya = $request->input('password');
     }
 
     public function deleteUser(Request $request){
