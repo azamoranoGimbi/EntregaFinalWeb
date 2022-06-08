@@ -46,7 +46,31 @@ class UserManagingController extends BaseController{
         
     }
 
+    public function loginAdministrador(Request $request){
+        $email = $request->input('email');
+        $contrasenya = $request->input('password');
+
+        $isLoginSuccess = User_table::where('Correo', $email)
+                                    ->where('password', $contrasenya)
+                                    ->where('Rol', 'administrador')
+                                    ->first();
+        if($isLoginSuccess){
+            return view('eliminausuari');
+        }
+        else{
+            return "<h1>Error</h1>";
+
+        }
+    }
     public function deleteUser(Request $request){
+        $email = $request->input('email');
+        $isDeleted = User_table::where('Correo', $email)->delete();
+        if($isDeleted){
+            return view('isDeleted');
+        }
+        else{
+            return "<h1>Error</h1>";
+        }
         return true;
     }
 
