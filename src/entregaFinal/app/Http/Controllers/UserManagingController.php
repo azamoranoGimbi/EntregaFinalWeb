@@ -54,7 +54,7 @@ class UserManagingController extends BaseController{
                                     ->where('password', $contrasenya)
                                     ->first();
         if($isLoginSuccess){
-
+            session(['email' => $email]);
             return view('welcome');
         }
         else{
