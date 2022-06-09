@@ -23,28 +23,44 @@ class UserManagingController extends BaseController{
         $contrassenya = $request->input('password');
         $dataNaixement = $request->input('birthday');
         $imatge = $request->input('image');
+            
+            $isInserSuccess = User_table::insert(
+                [
+                    'Nombre' => $nom,
+                    'Apellidos' => $cognoms,
+                    'Correo' => $email,
+                    'NickName' => $nomUsuari,
+                    'password' => $contrassenya,
+                    'FechaNacimiento' => $dataNaixement,
+                    'Rol' => "estandar",
+                    'RutaImagen' => $imatge
+                ]
+            );
+            if($isInserSuccess){
+    
+                return view('pages-login');
+            }else{
+                return view('welcome');
+            }
+        
+        
+    }
 
-        $isInserSuccess = User_table::insert(
-            [
-                'Nombre' => $nom,
-                'Apellidos' => $cognoms,
-                'Correo' => $email,
-                'NickName' => $nomUsuari,
-                'password' => $contrassenya,
-                'FechaNacimiento' => $dataNaixement,
-                'Rol' => "estandar",
-                'RutaImagen' => $imatge
-            ]
-        );
-        if($isInserSuccess){
+    public function loginUser(Request $request){
+        $email = $request->input('email');
+        $contrasenya = $request->input('password');
 
-            return view('registerSuccess');
+        $isLoginSuccess = User_table::where('Correo', $email)
+                                    ->where('password', $contrasenya)
+                                    ->first();
+        if($isLoginSuccess){
+
+            return view('welcome');
         }
         else{
             return "<h1>Error</h1>";
+
         }
-        
-    }
 
     public function loginAdministrador(Request $request){
         $email = $request->input('email');
@@ -61,6 +77,8 @@ class UserManagingController extends BaseController{
             return "<h1>Error</h1>";
 
         }
+
+
     }
     public function deleteUser(Request $request){
         $email = $request->input('email');
