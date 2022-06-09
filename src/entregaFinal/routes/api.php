@@ -22,7 +22,7 @@ Route::get('/esAdministrador', function () {
     return view('esOnoAdministrador');
 });
 Route::post('/loginAdministrador', [UserManagingController::class, 'loginAdministrador']);
-=======
+
 Route::get('/go-to-login', function(){
     return view('pages-login');
 });
