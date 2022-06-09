@@ -23,29 +23,46 @@ class UserManagingController extends BaseController{
         $contrassenya = $request->input('password');
         $dataNaixement = $request->input('birthday');
         $imatge = $request->input('image');
-
-        $isInserSuccess = User_table::insert(
-            [
-                'Nombre' => $nom,
-                'Apellidos' => $cognoms,
-                'Correo' => $email,
-                'NickName' => $nomUsuari,
-                'password' => $contrassenya,
-                'FechaNacimiento' => $dataNaixement,
-                'Rol' => "estandar",
-                'RutaImagen' => $imatge
-            ]
-        );
-        if($isInserSuccess){
-
-            return view('registerSuccess');
-        }
-        else{
-            return "<h1>Error</h1>";
-        }
+            
+            $isInserSuccess = User_table::insert(
+                [
+                    'Nombre' => $nom,
+                    'Apellidos' => $cognoms,
+                    'Correo' => $email,
+                    'NickName' => $nomUsuari,
+                    'password' => $contrassenya,
+                    'FechaNacimiento' => $dataNaixement,
+                    'Rol' => "estandar",
+                    'RutaImagen' => $imatge
+                ]
+            );
+            if($isInserSuccess){
+    
+                return view('pages-login');
+            }else{
+                return view('welcome');
+            }
+        
         
     }
 
+    public function loginUser(Request $request){
+        $email = $request->input('email');
+        $contrasenya = $request->input('password');
+
+        $isLoginSuccess = User_table::where('Correo', $email)
+                                    ->where('password', $contrasenya)
+                                    ->first();
+        if($isLoginSuccess){
+
+            return view('welcome');
+        }
+        else{
+            return "<h1>Error</h1>";
+
+        }
+
+    }
     public function deleteUser(Request $request){
         return true;
     }
