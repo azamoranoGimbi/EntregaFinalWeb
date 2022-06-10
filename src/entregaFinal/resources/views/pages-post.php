@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Forms / Editors - NiceAdmin Bootstrap Template</title>
+  <title>Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -17,8 +17,8 @@
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-  <!-- Vendor CSS Files 
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">-->
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -27,9 +27,8 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
-  <!-- Template Main CSS File 
-  <link href="assets/css/style.css" rel="stylesheet">-->
-  <link href="css/style.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
@@ -529,11 +528,11 @@
             <a href="./pages-post-audio.html"><h5 class="card-title">Post tipo Audio</h5> </a><!-- QUITAR ENLACE SI AL FINAL NO REDIRECCIONO, CREO QUE ES MEJOR NO REDIRECCIONAR -->
 
               <!-- Quill Editor Default -->
-              <div>
+              <div class="quill-editor-default">
                 <p>Visualizar post creado tipo <strong> audio</strong> </p>
                 <p>Rodrigo Koxa y la ola más grande jamás surfeada</p>
                 <audio controls>
-                  <source src="./audio/mar.mp3" type="audio/mpeg">
+                  <source src="./assets/audio/mar.mp3" type="audio/mpeg">
                   Your browser does not support the audio element.
                 </audio>
               </div>
@@ -549,7 +548,7 @@
 
               <!-- Quill Editor Bubble -->
              
-              <div>
+              <div class="quill-editor-bubble">
                  <p>Visualizar post creado tipo <strong> texto</strong> </p>
                 <p>Historia de un dia normal<br>
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
@@ -564,13 +563,13 @@
 
               <!-- Quill Editor Bubble -->
             
-              <div>
+              <div class="quill-editor-bubble">
             
                 <p>Visualizar post creado tipo <strong>video</strong></p>
                  <p>Rodrigo Koxa y la ola más grande jamás surfeada
 </p>
                 <video width="400" controls>
-                  <source src="/video/mar.mp4" type="video/mp4">
+                  <source src="./assets/video/mar.mp4" type="video/mp4">
                   Your browser does not support HTML video.
                 </video>
               </div>
@@ -584,11 +583,11 @@
 
               <!-- Quill Editor Full -->
            
-              <div>
+              <div class="quill-editor-full">
                
                 <p>Visualizar post creado tipo <strong>imagen</strong></p>
                  <p>Imagen de una ola</p>
-                 <img src="img/ola.jpg" width="500" height="333">
+                 <img src="./assets/img/ola.jpg" width="500" height="333">
               </div>
               <!-- End Quill Editor Full -->
 
@@ -608,7 +607,7 @@
                 <p>Hello World!</p>
                 <p>This is TinyMCE <strong>full</strong> editor</p>
               </textarea><!-- End TinyMCE Editor -->
-                <button class="btn btn-primary" type="submit">Añadir al muro</button>
+<button class="CREAR CLASEE">Añadir</button>
             </div>
           </div>
 
