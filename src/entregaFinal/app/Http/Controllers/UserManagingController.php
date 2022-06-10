@@ -23,7 +23,8 @@ class UserManagingController extends BaseController{
         $contrassenya = $request->input('password');
         $dataNaixement = $request->input('birthday');
         $imatge = $request->input('image');
-            
+        try{
+
             $isInserSuccess = User_table::insert(
                 [
                     'Nombre' => $nom,
@@ -36,12 +37,14 @@ class UserManagingController extends BaseController{
                     'RutaImagen' => $imatge
                 ]
             );
-            if($isInserSuccess){
-    
-                return view('pages-login');
-            }else{
-                return view('welcome');
-            }
+
+            return view('pages-login');
+
+        } catch(\Exception $e){
+
+            return view('noRegister');
+        }
+        
         
         
     }
