@@ -30,6 +30,12 @@
   <!-- Template Main CSS File 
   <link href="assets/css/style.css" rel="stylesheet">-->
   <link href="css/style.css" rel="stylesheet">
+  <link href="css/style chat.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">  
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" rel="stylesheet">  
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">  
+  <link href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" rel="stylesheet">  
+
 
   <!-- =======================================================
   * Template Name: NiceAdmin - v2.2.2
@@ -71,81 +77,6 @@
         <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
-            <i class="bi bi-bell"></i>
-            <span class="badge bg-primary badge-number">4</span>
-          </a><!-- End Notification Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow notifications">
-            <li class="dropdown-header">
-              You have 4 new notifications
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-exclamation-circle text-warning"></i>
-              <div>
-                <h4>Lorem Ipsum</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>30 min. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-x-circle text-danger"></i>
-              <div>
-                <h4>Atque rerum nesciunt</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>1 hr. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-check-circle text-success"></i>
-              <div>
-                <h4>Sit rerum fuga</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>2 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li class="notification-item">
-              <i class="bi bi-info-circle text-primary"></i>
-              <div>
-                <h4>Dicta reprehenderit</h4>
-                <p>Quae dolorem earum veritatis oditseno</p>
-                <p>4 hrs. ago</p>
-              </div>
-            </li>
-
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li class="dropdown-footer">
-              <a href="#">Show all notifications</a>
-            </li>
-
-          </ul><!-- End Notification Dropdown Items -->
-
-        </li><!-- End Notification Nav -->
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" data-bs-toggle="dropdown">
             <i class="bi bi-chat-left-text"></i>
             <span class="badge bg-success badge-number">3</span>
           </a><!-- End Messages Icon -->
@@ -153,14 +84,14 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow messages">
             <li class="dropdown-header">
               You have 3 new messages
-              <a href="#"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
+              <a href="pages-chat.html"><span class="badge rounded-pill bg-primary p-2 ms-2">View all</span></a>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li class="message-item">
-              <a href="#">
+              <a href="pages-chat.html">
                 <img src="assets/img/messages-1.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>Maria Hudson</h4>
@@ -174,7 +105,7 @@
             </li>
 
             <li class="message-item">
-              <a href="#">
+              <a href="pages-chat.html">
                 <img src="assets/img/messages-2.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>Anna Nelson</h4>
@@ -188,7 +119,7 @@
             </li>
 
             <li class="message-item">
-              <a href="#">
+              <a href="pages-chat.html">
                 <img src="assets/img/messages-3.jpg" alt="" class="rounded-circle">
                 <div>
                   <h4>David Muldon</h4>
@@ -202,7 +133,7 @@
             </li>
 
             <li class="dropdown-footer">
-              <a href="#">Show all messages</a>
+              <a href="pages-chat.html">Show all messages</a>
             </li>
 
           </ul><!-- End Messages Dropdown Items -->
@@ -219,7 +150,6 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -234,27 +164,6 @@
             <li>
               <hr class="dropdown-divider">
             </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-                <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
             <li>
               <a class="dropdown-item d-flex align-items-center" href="pages-login.html">
                 <i class="bi bi-box-arrow-right"></i>
@@ -283,106 +192,11 @@
       </li><!-- End Muro Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tables-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-layout-text-window-reverse"></i><span>Tables</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tables-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="tables-general.html">
-              <i class="bi bi-circle"></i><span>General Tables</span>
-            </a>
-          </li>
-          <li>
-            <a href="tables-data.html">
-              <i class="bi bi-circle"></i><span>Data Tables</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Tables Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#charts-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-bar-chart"></i><span>Charts</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="charts-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="charts-chartjs.html">
-              <i class="bi bi-circle"></i><span>Chart.js</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>ApexCharts</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>ECharts</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Charts Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-gem"></i><span>Icons</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="icons-bootstrap.html">
-              <i class="bi bi-circle"></i><span>Bootstrap Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-remix.html">
-              <i class="bi bi-circle"></i><span>Remix Icons</span>
-            </a>
-          </li>
-          <li>
-            <a href="icons-boxicons.html">
-              <i class="bi bi-circle"></i><span>Boxicons</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Icons Nav -->
-
-      <li class="nav-heading">Pages</li>
-
-      <li class="nav-item">
         <a class="nav-link collapsed" href="users-profile.html">
           <i class="bi bi-person"></i>
           <span>Profile</span>
         </a>
       </li><!-- End Profile Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.html">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-contact.html">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-error-404.html">
-          <i class="bi bi-dash-circle"></i>
-          <span>Error 404</span>
-        </a>
-      </li><!-- End Error 404 Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-blank.html">
-          <i class="bi bi-file-earmark"></i>
-          <span>Blank</span>
-        </a>
-      </li><!-- End Blank Page Nav -->
-
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -390,34 +204,113 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Muro</h1>
+      <h1>Chat</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="pages-post.html">Muro</a></li>
+          <li class="breadcrumb-item">Muro</li>
+          <li class="breadcrumb-item active"><a href="pages-post.html">Chat</a></li>
+         
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
-    <section class="section">
-        <div class="col-lg-6">
-
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">TinyMCE Editor</h5>
-
-              <!-- TinyMCE Editor -->
-              <textarea class="tinymce-editor">
-                <p>Hello World!</p>
-                <p>This is TinyMCE <strong>full</strong> editor</p>
-              </textarea><!-- End TinyMCE Editor -->
-              <a href="pages-post.html"><button class="btn btn-primary" type="submit">Añadir al muro</button></a>
+    <div class="page-content page-container" id="page-content">
+      <div class="padding">
+          <div class="row container d-flex justify-content-center">
+  <div class="col-md-6">
+              <div class="card card-bordered">
+                <div class="card-header">
+                  <h4 class="card-title"><strong>Chat</strong></h4>
+                </div>
+  
+  
+                <div class="ps-container ps-theme-default ps-active-y" id="chat-content" style="overflow-y: scroll !important; height:400px !important;">
+                  <div class="media media-chat">
+                    <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                    <div class="media-body">
+                      <p>Hi</p>
+                      <p>How are you ...???</p>
+                      <p>What are you doing tomorrow?<br> Can we come up a bar?</p>
+                      <p class="meta"><time datetime="2018">23:58</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-meta-day">Today</div>
+  
+                  <div class="media media-chat media-chat-reverse">
+                    <div class="media-body">
+                      <p>Hiii, I'm good.</p>
+                      <p>How are you doing?</p>
+                      <p>Long time no see! Tomorrow office. will be free on sunday.</p>
+                      <p class="meta"><time datetime="2018">00:06</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat">
+                    <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                    <div class="media-body">
+                      <p>Okay</p>
+                      <p>We will go on sunday? </p>
+                      <p class="meta"><time datetime="2018">00:07</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat media-chat-reverse">
+                    <div class="media-body">
+                      <p>That's awesome!</p>
+                      <p>I will meet you Sandon Square sharp at 10 AM</p>
+                      <p>Is that okay?</p>
+                      <p class="meta"><time datetime="2018">00:09</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat">
+                    <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                    <div class="media-body">
+                      <p>Okay i will meet you on Sandon Square </p>
+                      <p class="meta"><time datetime="2018">00:10</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat media-chat-reverse">
+                    <div class="media-body">
+                      <p>Do you have pictures of Matley Marriage?</p>
+                      <p class="meta"><time datetime="2018">00:10</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat">
+                    <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                    <div class="media-body">
+                      <p>Sorry I don't have. i changed my phone.</p>
+                      <p class="meta"><time datetime="2018">00:12</time></p>
+                    </div>
+                  </div>
+  
+                  <div class="media media-chat media-chat-reverse">
+                    <div class="media-body">
+                      <p>Okay then see you on sunday!!</p>
+                      <p class="meta"><time datetime="2018">00:12</time></p>
+                    </div>
+                  </div>
+  
+                <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;"><div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div></div><div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;"><div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div></div></div>
+  
+                <div class="publisher bt-1 border-light">
+                  <img class="avatar avatar-xs" src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+                  <input class="publisher-input" type="text" placeholder="Write something">
+                  <span class="publisher-btn file-group">
+                    <i class="fa fa-paperclip file-browser"></i>
+                    <input type="file">
+                  </span>
+                  <a class="publisher-btn" href="#" data-abc="true"><i class="fa fa-smile"></i></a>
+                  <a class="publisher-btn text-info" href="#" data-abc="true"><i class="fa fa-paper-plane"></i></a>
+                </div>
+  
+               </div>
             </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
+            </div>
+            </div>
+            </div>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
