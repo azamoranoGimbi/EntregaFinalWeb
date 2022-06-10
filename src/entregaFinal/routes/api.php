@@ -21,8 +21,11 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::get('/esAdministrador', function () {
     return view('esOnoAdministrador');
 });
+Route::get('/go-to-posts', function () {
+    return view('pages-post');
+});
 Route::post('/loginAdministrador', [UserManagingController::class, 'loginAdministrador']);
-=======
+
 Route::get('/go-to-login', function(){
     return view('pages-login');
 });
@@ -30,7 +33,6 @@ Route::get('/go-to-register', function(){
     return view('welcome');
 });
 Route::post('/login', [UserManagingController::class, 'loginUser']);
-
 Route::post('/userRegister', [UserManagingController::class, 'addUser']);
 Route::post('/deleteUser', [UserManagingController::class, 'deleteUser']);
 Route::put('/editUser', [UserManagingController::class, 'editUser']);
