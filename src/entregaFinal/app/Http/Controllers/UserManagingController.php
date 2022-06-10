@@ -96,7 +96,7 @@ class UserManagingController extends BaseController{
     }
 
     public function editUser(Request $request){
-       
+       $edit = User_table::find($request->input('email'));
         return true;
     }
 
