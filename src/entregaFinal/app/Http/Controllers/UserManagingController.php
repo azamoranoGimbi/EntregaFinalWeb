@@ -54,14 +54,14 @@ class UserManagingController extends BaseController{
                                     ->where('password', $contrasenya)
                                     ->first();
         if($isLoginSuccess){
-            session(['email' => $email]);
-            return view('welcome');
+            session(['email' => $email, 'name' => $isLoginSuccess->Nombre, 'lastname' => $isLoginSuccess->Apellidos]);
+            return view('pages-post');
         }
         else{
             return "<h1>Error</h1>";
 
         }
-
+    }
     public function loginAdministrador(Request $request){
         $email = $request->input('email');
         $contrasenya = $request->input('password');
