@@ -84,6 +84,7 @@
                     </div>
 
                     
+                    
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Nom d'usuari</label>
                       <div class="input-group has-validation">
