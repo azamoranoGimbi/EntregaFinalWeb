@@ -32,6 +32,14 @@ Route::get('/go-to-login', function(){
 Route::get('/go-to-register', function(){
     return view('welcome');
 });
+Route::get('/go-to-profile', function () {
+    return view('users-profile');
+});
+Route::get('/go-to-chat', function () {
+    return view('pages-chat');
+});
+
+
 
 Route::post('/login', [UserManagingController::class, 'loginUser']);
 Route::post('/userRegister', [UserManagingController::class, 'addUser']);
