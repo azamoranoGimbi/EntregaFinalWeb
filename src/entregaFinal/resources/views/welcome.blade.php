@@ -51,7 +51,6 @@
 
               <div class="d-flex justify-content-center py-4">
                 <img src="assets/img/logo.png" alt="">
-                <span class="d-none d-lg-block">Socialia</span>
               </div><!-- End Logo -->
 
               <div class="card mb-3">
@@ -104,16 +103,12 @@
                       <label for="birthday" class="form-label">Data de naixment</label>
                       <input type="date" name="birthday" class="form-control" id="birthday">
                     </div>
-
-                    <div class="col-12">
-                      <label for="image" class="form-label">Imatge de perfil</label>
-                      <input type="file" name="image" class="form-control" id="image">
-                    </div>
+                    
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Create Account</button>
                     </div>
                     <div class="col-12">
-                      <p class="small mb-0">Ja ets part de la família? <a href="/api/go-to-login">Log in</a></p>
+                      <p class="small mb-0">Ja ets part de la família? <a href="/go-to-login">Log in</a></p>
                     </div>
                     <div class="col-12">
                       <p class="small mb-0">Ets administrador? <a href="/api/esAdministrador">Log in</a></p>

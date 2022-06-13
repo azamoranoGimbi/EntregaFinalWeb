@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserManagingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,28 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/posts', function () {
+    return view('pages-post');
+});
+
+Route::get('/go-to-login', function(){
+    return view('pages-login');
+});
+
+Route::get('/go-to-logout', function(){
+    return view('pages-login');
+});
+
+Route::get('/go-to-register', function(){
+    return view('welcome');
+});
+
+Route::get('/esAdministrador', function () {
+    return view('esOnoAdministrador');
+});
+
+Route::get('/go-to-editUser', function(){
+    return view('editUser');
 });
